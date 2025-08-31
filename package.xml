@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gnss_dualrtk_heading</name>
+  <version>0.1.0</version>
+  <description>Dual RTK-GPS based heading estimation for ROS1. Provides /heading for GNSS-Localizer.</description>
+
+  <maintainer email="you@example.com">Levi Chen</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf</depend>
+
+  <!-- Runtime only: driver that provides /fix and /fix_2 -->
+  <exec_depend>nmea_navsat_driver</exec_depend>
+
+  <export/>
+</package>

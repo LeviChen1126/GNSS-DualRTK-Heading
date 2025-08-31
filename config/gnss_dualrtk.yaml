@@ -1,0 +1,15 @@
+use_first_fix_as_origin: true
+ref_lat: 25.033964
+ref_lon: 121.564468
+ref_alt: 20.0
+
+yaw_offset_deg: 0.0
+fix_front_topic: "/fix"
+fix_back_topic: "/fix_2"
+max_sync_dt: 0.2
+
+publish_heading_pose: true
+heading_pose_frame_id: "map"
+heading_pose_base_frame: "base_link"
+heading_pose_position: "mid"   # mid | front | back | zero
+publish_tf: false

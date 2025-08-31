@@ -1,0 +1,26 @@
+<!-- Start two NMEA serial drivers and topic drivers -->
+<launch>
+  <arg name="port1" default="/dev/ttyACM0"/>
+  <arg name="port2" default="/dev/ttyACM1"/>
+  <arg name="baud"  default="19200"/>
+
+  <!-- GPS #1 -->
+  <node pkg="nmea_navsat_driver" type="nmea_serial_driver" name="gps1_serial" output="screen">
+    <param name="port" value="$(arg port1)"/>
+    <param name="baud" value="$(arg baud)"/>
+  </node>
+  <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="gps1_topic" output="screen"/>
+
+  <!-- GPS #2 -->
+  <node pkg="nmea_navsat_driver" type="nmea_serial_driver" name="gps2_serial" output="screen">
+    <param name="port" value="$(arg port2)"/>
+    <param name="baud" value="$(arg baud)"/>
+    <remap from="/nmea_sentence" to="/nmea_sentence_2"/>
+  </node>
+  <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="gps2_topic" output="screen">
+    <remap from="/nmea_sentence"  to="/nmea_sentence_2"/>
+    <remap from="/fix"            to="/fix_2"/>
+    <remap from="/vel"            to="/vel_2"/>
+    <remap from="/time_reference" to="/time_reference_2"/>
+  </node>
+</launch>

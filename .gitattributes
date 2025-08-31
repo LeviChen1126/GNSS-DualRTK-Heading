@@ -1,0 +1,18 @@
+# Normalize line endings across platforms
+* text=auto eol=lf
+
+# Mark common binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.bag binary
+*.bin binary
+
+# Ignore datasets from GitHub language statistics
+*.csv linguist-vendored
+*.bag linguist-vendored
+/data/* linguist-vendored
+/dataset/* linguist-vendored

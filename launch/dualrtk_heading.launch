@@ -1,0 +1,7 @@
+<launch>
+  <arg name="config" default="$(find gnss_dualrtk_heading)/config/gnss_dualrtk.yaml"/>
+
+  <node pkg="gnss_dualrtk_heading" type="dualrtk_heading_node" name="dualrtk_heading_node" output="screen">
+    <rosparam file="$(arg config)" command="load"/>
+  </node>
+</launch>

@@ -1,0 +1,17 @@
+# Catkin / ROS build
+build/
+devel/
+install/
+logs/
+.catkin_tools/
+.cache/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
