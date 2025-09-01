@@ -3,7 +3,6 @@
 [English Verion](./README.md)  
 
 本套件利用**雙 RTK-GPS 天線**計算航向角，解決自動駕駛車輛開機時無法自動判斷車頭朝向。  
-可搭配 [GNSS-Localizer](../GNSS-Localizer) 建立精細平面座標系
 
 ---
 
