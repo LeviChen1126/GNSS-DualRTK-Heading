@@ -3,7 +3,6 @@
 [中文版本](./README_zh-TW.md)  
 
 This package uses **dual RTK-GPS antennas** to calculate heading, solving the problem where autonomous vehicles cannot automatically determine the facing direction at startup.  
-It can be integrated with [GNSS-Localizer](../GNSS-Localizer) to establish a precise local coordinate system.
 
 ---
 
